@@ -16,7 +16,7 @@
   </div>
 
   <div class="grid-wrapper">
-    <ejs-grid [dataSource]="rowData" allowPaging="true" height="400">
+    <ejs-grid [dataSource]="rowData" [allowPaging]="true" [pageSettings]="{ pageSize: 100 }" height="400">
       <e-columns>
         <e-column *ngFor="let c of columns"
                   [field]="c.field"
