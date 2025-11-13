@@ -12,19 +12,30 @@ import { GridModule } from '@syncfusion/ej2-angular-grids';
 })
 export class SyncTableComponent {
 
-  columns: Array<{ field: string; headerText?: string; width?: number }> = [
-    { field: 'Name', headerText: 'Name' },
-    { field: 'Age', headerText: 'Age' },
-    { field: 'City', headerText: 'City' }
-  ];
+columns: Array<{ field: string; headerText?: string; width?: number }> = [
+  { field: 'LoanID', headerText: 'Loan ID', width: 100 },
+  { field: 'AccountNumber', headerText: 'Account No.', width: 150 },
+  { field: 'CustomerName', headerText: 'Customer Name', width: 180 },
+  { field: 'LoanType', headerText: 'Loan Type', width: 150 },
+  { field: 'LoanAmount', headerText: 'Loan Amount ($)', width: 160 },
+  { field: 'InterestRate', headerText: 'Interest Rate (%)', width: 150 },
+  { field: 'Branch', headerText: 'Branch', width: 130 }
+];
 
-  rowData: any[] = [
-    { Name: 'Akash', Age:20 , City: 'Gurgaon' },
-    { Name: 'Sahi', Age: 22, City: 'Roing' },
-    {Name: 'Yash Yadav', Age: 21, City: 'Noida' },
-    {Name: 'Shalu Yadav',Age: 20  ,City: 'Mysuru'},
-    {Name: 'Alex', Age: 23, City: 'Kochi' }
-  ];
+rowData: any[] = [
+  { LoanID: 'LN001', AccountNumber: 'ACC789452', CustomerName: 'Ravi Sharma', LoanType: 'Home Loan', LoanAmount: 300000, InterestRate: 7.2, Branch: 'New York' },
+  { LoanID: 'LN002', AccountNumber: 'ACC156984', CustomerName: 'Neha Verma', LoanType: 'Car Loan', LoanAmount: 28000, InterestRate: 8.5, Branch: 'San Francisco' },
+  { LoanID: 'LN003', AccountNumber: 'ACC475823', CustomerName: 'Amit Patel', LoanType: 'Personal Loan', LoanAmount: 15000, InterestRate: 11.0, Branch: 'Chicago' },
+  { LoanID: 'LN004', AccountNumber: 'ACC983215', CustomerName: 'Pooja Singh', LoanType: 'Education Loan', LoanAmount: 42000, InterestRate: 9.5, Branch: 'Boston' },
+  { LoanID: 'LN005', AccountNumber: 'ACC264798', CustomerName: 'Vivek Rao', LoanType: 'Business Loan', LoanAmount: 100000, InterestRate: 10.5, Branch: 'Seattle' },
+  { LoanID: 'LN006', AccountNumber: 'ACC546321', CustomerName: 'John Carter', LoanType: 'Home Loan', LoanAmount: 250000, InterestRate: 6.8, Branch: 'Houston' },
+  { LoanID: 'LN007', AccountNumber: 'ACC875492', CustomerName: 'Sarah Lee', LoanType: 'Car Loan', LoanAmount: 32000, InterestRate: 9.2, Branch: 'Los Angeles' },
+  { LoanID: 'LN008', AccountNumber: 'ACC192837', CustomerName: 'Michael Brown', LoanType: 'Education Loan', LoanAmount: 55000, InterestRate: 8.9, Branch: 'Denver' },
+  { LoanID: 'LN009', AccountNumber: 'ACC654123', CustomerName: 'Priya Desai', LoanType: 'Personal Loan', LoanAmount: 20000, InterestRate: 10.0, Branch: 'Atlanta' },
+  { LoanID: 'LN010', AccountNumber: 'ACC849372', CustomerName: 'David Kim', LoanType: 'Business Loan', LoanAmount: 180000, InterestRate: 9.8, Branch: 'Miami' }
+];
+
+
 
   errors: string[] = [];
   successMessage = '';
