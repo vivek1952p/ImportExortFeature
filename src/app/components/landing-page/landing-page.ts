@@ -17,6 +17,16 @@ export class LandingPageComponent implements OnInit {
   constructor(private importService: ImportStorageService) {}
 
   ngOnInit() {
-    this.importsList = this.importService.getAllImports();
+    this.loadImports();
+  }
+
+  async loadImports() {
+    try {
+      await this.importService.loadImportsFromAzure();
+      this.importsList = this.importService.getAllImports();
+    } catch (error) {
+      console.error('Error loading imports:', error);
+      this.importsList = this.importService.getAllImports();
+    }
   }
 }

@@ -30,7 +30,19 @@ export class MainLandingPageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loadAllImportedRows();
+    this.loadFromAzure();
+  }
+
+  // Load imports from Azure on page init
+  async loadFromAzure() {
+    try {
+      console.log('Loading imports from Azure on page load');
+      await this.storage.loadImportsFromAzure();
+      this.loadAllImportedRows();
+    } catch (error) {
+      console.error('Error loading from Azure:', error);
+      this.loadAllImportedRows();
+    }
   }
 
   // Load and add serial number
