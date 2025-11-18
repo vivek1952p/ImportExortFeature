@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Synctable } from './synctable';
+import { MainLandingPage } from './main-landing-page';
 
-describe('Synctable', () => {
-  let component: Synctable;
-  let fixture: ComponentFixture<Synctable>;
+describe('MainLandingPage', () => {
+  let component: MainLandingPage;
+  let fixture: ComponentFixture<MainLandingPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Synctable]
+      imports: [MainLandingPage]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Synctable);
+    fixture = TestBed.createComponent(MainLandingPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
